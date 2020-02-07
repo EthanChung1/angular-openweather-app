@@ -1,6 +1,22 @@
 <!doctype html>
 <html lang="en" ng-app="openWeatherApp">
     <head>
+        <script charset='UTF-8'>
+            window['adrum-start-time'] = new Date().getTime();
+            (function(config){
+                config.appKey = 'AD-AAB-AAU-NCX';
+                config.adrumExtUrlHttp = 'http://cdn.appdynamics.com';
+                config.adrumExtUrlHttps = 'https://cdn.appdynamics.com';
+                config.beaconUrlHttp = 'http://col.eum-appdynamics.com';
+                config.beaconUrlHttps = 'https://col.eum-appdynamics.com';
+                config.xd = {enable : false};
+                config.spa = {
+                    "spa2": false
+                };
+            })(window['adrum-config'] || (window['adrum-config'] = {}));
+        </script>
+        <script src='https://cdn.appdynamics.com/adrum/adrum-4.5.15.2691.js'></script>
+
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8">
         <title>OpenWeather App</title>

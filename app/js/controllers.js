@@ -33,9 +33,17 @@ angular.module('openWeatherApp.controllers', [])
 
       $scope.hasState = 'has-success';
 
+
+        console.log("ManuallyMarked Page: "+$scope.location);
+        ADRUM.markVirtualPageBegin("ManuallyMarked: "+$scope.location);
+
+
       $scope.forecast = openWeatherMap.queryForecastDaily({
         location: $scope.location
       });
+
+        console.log("Mark the end of the virtual page: "+$scope.location);
+        ADRUM.markVirtualPageEnd();
     };
 
     // Set $scope.location and execute search on API
